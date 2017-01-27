@@ -1,7 +1,7 @@
 <nav class="navbar navbar-inverse success-background">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand brand-link" #home>Chat Buddy</a>
+      <a [routerLink]="['home']" class="navbar-brand brand-link" #home>Chat Buddy</a>
     </div>
     <ul class="nav navbar-nav">
       <!--<li><a [routerLink]="['home']" class="success-link">Home</a></li>
@@ -10,7 +10,7 @@
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a [routerLink]="['signup']" class="success-link"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="#" class="success-link"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><a [routerLink]="['login']" class="success-link"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
     </ul>
   </div>
 </nav>

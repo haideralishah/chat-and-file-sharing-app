@@ -71,11 +71,18 @@ export class SignUpComponent implements OnInit {
           // this.dataService.deActiveTab();
           that.router.navigate(['./home']);
         })
-        .catch(function (error) {
-          // Handle Errors here.
-          var errorCode = error.code;
-          var errorMessage = error.message;
-          // ...
+        .catch(function (err) {
+          var errorCode = err.code;
+          var errorMessage = err.message;
+          console.log(err.code);
+          if (errorCode == 'auth/email-already-in-use') {
+            that.error.message = errorMessage
+            that.error.status = true;
+            setTimeout(() => {
+              that.error.status = false;
+              that.error.message = ''
+            }, 5000);
+          }
         });
     }
   }

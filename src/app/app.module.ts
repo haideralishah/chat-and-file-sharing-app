@@ -13,6 +13,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { DataService } from './data.service';
+import { LoginComponent } from './login/login.component';
+import { ChatComponent } from './chat/chat.component';
 
 
 
@@ -21,6 +23,8 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'signup', component: SignUpComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'chat', component: ChatComponent },
 ];
 
 @NgModule({
@@ -29,7 +33,9 @@ const routes: Routes = [
     SignUpComponent,
     HomeComponent,
     AboutComponent,
-    NavigationComponent
+    NavigationComponent,
+    LoginComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
