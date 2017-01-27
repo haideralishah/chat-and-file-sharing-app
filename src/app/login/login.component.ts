@@ -48,11 +48,11 @@ export class LoginComponent implements OnInit {
             .then(function (snapshot) {
               var userRoll = snapshot.val();
               if (userRoll.roll == 'admin') {
-                // that.dataService.setNavBar('adminAuth');
+                that.dataService.setNavBar('userAuth');
                 that.router.navigate(['./chat']);
               }
               else {
-                // that.dataService.setNavBar('userAuth');
+                that.dataService.setNavBar('userAuth');
                 that.router.navigate(['./chat']);
               }
               // ...

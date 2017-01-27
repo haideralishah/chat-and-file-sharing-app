@@ -3,6 +3,12 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class DataService {
 
-  constructor() { }
+  constructor() {
+    this.setNavBar('noAuth');
+  }
 
+  currentNavBar;
+  setNavBar(val) {
+    this.currentNavBar = val;
+  }
 }
