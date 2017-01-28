@@ -1,0 +1,3 @@
+<div class="contacts" *ngFor="let user of users; let num = index" (click)='selectUser(user, userstyle)' [ngClass]="{selected: selectedContact == user.userName}">
+  <span #userstyle>{{user.userName}}</span>
+</div>

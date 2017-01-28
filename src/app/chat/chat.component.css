@@ -1,0 +1,43 @@
+.container-custome{
+    margin: 0;
+    padding: 0;
+}
+
+div#container-id{
+    width: 90%;
+    height: 650px;
+    margin: 0 auto;
+    padding: 40px 40px 0px 40px;
+    background-color: #f2f9ff;
+}
+
+.column1of2 {
+    float: left;
+    width: 30%;
+    height: 550px;
+    border-right: 5px solid #337ab7;
+     overflow-y: scroll;
+     overflow-x: hidden;
+}
+
+.column2of2 {
+    float: left;
+    width:65%;
+}
+
+::-webkit-scrollbar
+{
+  width: 1px !important;  /* for vertical scrollbars */
+  /*height: 12px; */
+  /* for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track
+{
+  background: #337ab7;
+}
+
+::-webkit-scrollbar-thumb
+{
+  background: #337ab7;
+}

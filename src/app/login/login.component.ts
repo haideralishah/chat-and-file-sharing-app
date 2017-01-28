@@ -44,6 +44,7 @@ export class LoginComponent implements OnInit {
     else {
       firebase.auth().signInWithEmailAndPassword(email, password)
         .then((user) => {
+          this.dataService.setUserID(user.uid);
           firebase.database().ref('/users/' + user.uid).once('value')
             .then(function (snapshot) {
               var userRoll = snapshot.val();

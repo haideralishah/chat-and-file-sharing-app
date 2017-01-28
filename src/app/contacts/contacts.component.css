@@ -1,0 +1,20 @@
+.contacts{
+    color: #337ab7;
+    font-size: 2em;
+    border-top: 0.5px solid #d2d2d2;
+    border-bottom: 0.5px solid #d2d2d2;
+    padding: 10px;
+    padding-left:30px;
+   
+}
+
+.contacts:hover {
+    background-color: #337ab7;
+    color: #d2d2d2;
+}
+
+.selected{
+ background-color: #337ab7;
+    color: #d2d2d2;
+
+}

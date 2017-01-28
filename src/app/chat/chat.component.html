@@ -1,3 +1,16 @@
-<p>
-  chat works!
-</p>
+<!--<div class="well well-lg" *ngFor="let user of users; let num = index">
+  {{user.userName}}
+</div>-->
+<div class="container-custome">
+  <div id="container-id">
+
+    <div id="col1of2" class="column1of2">
+      <app-contacts [users]='users' (userSelect)='selectUser($event)'> </app-contacts>
+    </div>
+
+    <div id="col1of2" class="column2of2">
+      <app-messages></app-messages>
+    </div>
+
+  </div>
+</div>

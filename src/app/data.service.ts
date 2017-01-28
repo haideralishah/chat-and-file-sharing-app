@@ -11,4 +11,16 @@ export class DataService {
   setNavBar(val) {
     this.currentNavBar = val;
   }
+
+  userID: any = '';
+  setUserID(uid) {
+    this.userID = uid;
+  }
+
+  selectedUserId: any = '';
+  setSelectedUser(id) {
+    this.selectedUserId = id
+
+  }
+
 }

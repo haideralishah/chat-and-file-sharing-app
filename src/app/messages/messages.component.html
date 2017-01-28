@@ -1,0 +1,32 @@
+<div *ngFor='let msg of messages; let indx = index'>
+  <!--<div *ngIf='currentUserID && dataService.selectedUser.id && (msg.senderId == currentUserID || msg.senderId == dataService.selectedUser.id) && (msg.receiverId == currentUserID || msg.senderId == dataService.selectedUser.id)'>{{msg.message}}</div>-->
+  <div *ngIf='msg.fileUrl == "" && currentUserID && dataService.selectedUserId  && currentUserID != "" && dataService.selectedUserId != "" && (msg.senderId == currentUserID || msg.senderId == dataService.selectedUserId) && (msg.receiverId == currentUserID || msg.receiverId == dataService.selectedUserId)'>{{msg.message}}</div>
+  <div *ngIf='msg.fileUrl != "" && currentUserID && dataService.selectedUserId  && currentUserID != "" && dataService.selectedUserId != "" && (msg.senderId == currentUserID || msg.senderId == dataService.selectedUserId) && (msg.receiverId == currentUserID || msg.receiverId == dataService.selectedUserId)'><a [href]="msg.fileUrl" target="_blank">File</a></div>
+</div>
+<div *ngIf='!dataService.selectedUserId' class="center-logo">
+  <img src="./assets/images/download.png" alt="center-logo" class="center-logo">
+</div>
+
+
+
+
+<div class="input-group message-form" *ngIf='dataService.selectedUserId'>
+  <input type="text" class="form-control" placeholder="Type a message" #msg [(ngModel)]="msgBox">
+  <div class="input-group-btn">
+    <!--<input type="file" name="files" #fileUp (change)="fileChangeEvent($event)" id='filetoupload' />-->
+    <!--<button type="file" class="btn btn-primary upload" (click)='uploadPsc(fileUp)'>Upload PSC</button>-->
+
+
+    <input type="file" name="files" #fileUp (change)="fileChangeEvent($event)" />
+
+    <!--<button class="btn btn-default" (click)='uploadImage(fileUp)'>
+        <i class="glyphicon glyphicon-camera"></i>
+      </button>-->
+    <button class="btn btn-default" (click)='uploadImage(fileUp)'>
+        <i class="glyphicon glyphicon-camera"></i>
+      </button>
+    <button class="btn btn-default" (click)='sendMessage(msg.value, "")'>
+        <i class="glyphicon glyphicon-send"></i>
+      </button>
+  </div>
+</div>

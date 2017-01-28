@@ -15,6 +15,8 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { DataService } from './data.service';
 import { LoginComponent } from './login/login.component';
 import { ChatComponent } from './chat/chat.component';
+import { ContactsComponent } from './contacts/contacts.component';
+import { MessagesComponent } from './messages/messages.component';
 
 
 
@@ -35,7 +37,9 @@ const routes: Routes = [
     AboutComponent,
     NavigationComponent,
     LoginComponent,
-    ChatComponent
+    ChatComponent,
+    ContactsComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,

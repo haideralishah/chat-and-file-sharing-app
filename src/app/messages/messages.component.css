@@ -1,0 +1,26 @@
+.glyphicon-send{
+    color:  #337ab7;
+}
+
+.message-form{
+    position: fixed;
+    bottom: 6%;
+    width: 60%;
+
+}
+
+.center-logo{
+    /*display: block;*/
+    /*margin: 0 auto;
+    text-align: center;
+    position: fixed;
+    top: 10%;*/
+    /*width: 60%;*/
+
+    display: block;
+    margin: 0px auto;
+    margin-top: 5%;
+    width: 70%;
+    height: 70%;
+    }
+    
