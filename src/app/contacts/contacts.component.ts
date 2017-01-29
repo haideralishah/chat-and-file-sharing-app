@@ -17,18 +17,22 @@ declare var firebase: any;
 })
 export class ContactsComponent implements OnInit {
   users: any;
+  cureentUser: any;
   userSelect: EventEmitter<Object>;
   constructor(public dataService: DataService, private router: Router) {
     this.userSelect = new EventEmitter();
+    this.cureentUser = firebase.auth().currentUser.uid;
   }
 
   ngOnInit() {
   }
   selectedContact
+
+
   selectUser(user, userstyle) {
     this.selectedContact = user.userName;
     this.dataService.setSelectedUser(user);
-    
+
     // console.log(user, userstyle, 'user, userstyleuser, userstyle');
 
 
